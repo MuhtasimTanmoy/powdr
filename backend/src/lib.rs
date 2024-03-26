@@ -25,7 +25,7 @@ pub enum BackendType {
     PilStarkCli,
     #[cfg(feature = "plonky3")]
     #[strum(serialize = "plonky3")]
-    Plonky3
+    Plonky3,
 }
 
 impl BackendType {
@@ -37,7 +37,8 @@ impl BackendType {
         const ESTARK_FACTORY: pilstark::estark::EStarkFactory = pilstark::estark::EStarkFactory;
         const PIL_STARK_CLI_FACTORY: pilstark::PilStarkCliFactory = pilstark::PilStarkCliFactory;
         #[cfg(feature = "plonky3")]
-        const PLONKY3_FACTORY: plonky3_impl::Plonky3ProverFactory = plonky3_impl::Plonky3ProverFactory;
+        const PLONKY3_FACTORY: plonky3_impl::Plonky3ProverFactory =
+            plonky3_impl::Plonky3ProverFactory;
 
         match self {
             #[cfg(feature = "halo2")]
