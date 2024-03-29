@@ -158,8 +158,7 @@ pub fn test_plonky3(file_name: &str, inputs: Vec<GoldilocksField>) {
 }
 
 #[cfg(not(feature = "plonky3"))]
-pub fn test_plonky3(_: &str, _: Vec<GoldilocksField>) {
-}
+pub fn test_plonky3(_: &str, _: Vec<GoldilocksField>) {}
 
 #[cfg(feature = "plonky3")]
 pub fn gen_plonky3_proof(_: &str, _: Vec<GoldilocksField>) {
@@ -167,8 +166,7 @@ pub fn gen_plonky3_proof(_: &str, _: Vec<GoldilocksField>) {
 }
 
 #[cfg(not(feature = "plonky3"))]
-pub fn gen_plonky3_proof(_: &str, _: Vec<GoldilocksField>) {
-}
+pub fn gen_plonky3_proof(_: &str, _: Vec<GoldilocksField>) {}
 
 /// Returns the analyzed PIL containing only the std library.
 pub fn std_analyzed<T: FieldElement>() -> Analyzed<T> {
